@@ -18,21 +18,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Play play = new Play();
-        String choice = "";
+        // String choice = "";
         
         printMessage();
-        do {
-            if (choice.equals("yes"))
-                System.out.println("\nOk, Good luck again!");
+        // do {
+        //     if (choice.equals("yes"))
+        //         System.out.println("\nOk, Good luck again!");
 
             play.game();
-
-            do {
-                System.out.print("Do you want to play another hand[Yes/No]: ");
-                choice = scanner.nextLine();
-                choice = choice.toLowerCase();
-            } while (!(choice.equals("yes")) && !(choice.equals("no")));
-        } while (choice.equals("yes"));
+            play.closeScanner();
+        //     do {
+        //         System.out.print("Do you want to play another hand[Yes/No]: ");
+        //         choice = scanner.nextLine();
+        //         choice = choice.toLowerCase();
+        //     } while (!(choice.equals("yes")) && !(choice.equals("no")));
+        // } while (choice.equals("yes"));
         
         System.out.println("Thank you for playing Blackjack with Mr. Jackie!");
         scanner.close();
